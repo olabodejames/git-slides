@@ -16,7 +16,7 @@ you should have git installed and working for this to work; you could just alter
 Just open the index.html with a browser and it should work fine.
 
 ## Dependencies
-	* [reveal.js](http://github.com/hakimel/reveal.js) slideshow library.
+- [reveal.js](http://github.com/hakimel/reveal.js) slideshow library.
 
 If you want to have the repo installed with Grunt will also need to have grunt.js [installed](https://github.com/hakimel/reveal.js#installation) to build and run it from ( http://localhost:8000/ ) in your browser of choice ( any recent browser will do ) as the library uses some CSS 3 mojo and should render properly on recent browsers.
 
