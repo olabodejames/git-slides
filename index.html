@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Getting With Git - GDG Event</title>
+		<meta name="description" content="Google developer group Lagos git source version control event held at the CCHub Lagos.">
+		<meta name="author" content="Nanyak Loknan S.">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- <link rel="stylesheet" href="css/theme/simple.css" id="theme"> -->
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 id="what_is_aws">GDG LAGOS</h1>
+					<h3>Getting Deep with Git</h3>
+				</section>
+
+				<section>
+					<!-- <h3>Introduction</h3> -->
+					<!-- <p><small>By</small></p> -->
+					<div>
+						<div class="ubnotes">Nanyak Loknan S.</div>
+						<small><a href="http://twitter.com/nanyaks">@nanyaks</a></small>
+					</div>
+				</section> <!-- intro name -->
+
+				<section>
+					<img src="./img/aws-main.png" alt="aws logo" />
+					<div>
+						This presentation aims to give an overview of what the Amazon Web Services is and why people are adopting it.
+					</div>
+					<br />
+					<div class="subnotes">I'll be sure to make some time for questions</p>
+				</section>
+
+				<section>
+					<h2>Introduction</h2>
+					<div>
+						The Amazon Web Services is a collection of remote computing services that together make up a cloud computing platform offered over the internet by Amazon.
+					</div>
+					<div class="subnotes">It aims to enable businesses and developers to use Web Services to build and easily deploy scalable, sophisticated systems.</div>
+
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2 class="staticHd">Why should I care?</h2>
+					<section></section>
+					<section>
+						<div class="point">Variable Expense</div>
+						<div id="name" class=" subnotes">
+						   Save costs by paying only for what you use. No upfront payments and freedom to opt out
+						</div>
+					</section>
+					<section>
+						<div id="point" class="point">
+						   Standard and Highly Available Computing units
+						</div>
+						<div id="j" class="subnotes">
+							Using the AWS, you have access to the same Infrastructure that powers all Amazon technology.
+						</div>
+					</section>
+					<section>
+						<div class="point">
+							Elastic Capacity
+						</div>
+						<div class="subnotes">No need to guess capacity requirements and over provision hardware</div>
+					</section>
+					<section>
+						<div id="j" class="point">
+							Speed of Deployment
+						</div>
+						<div class="subnotes">Get Infrastructure deployed and production ready in minutes and not in weeks</div>
+					</section>
+					<section>
+						<div id="j" class="point">
+							Focus on your Business
+						</div>
+						<div class="subnotes">You don't have to worry about the intricacies of building a data center.</div>
+					</section>
+				</section> <!-- why? -->
+
+				<section>
+					<h2>Reference Model</h2>
+					<div id="name" class="image-point">
+						<img src="./img/aws-stack.png" alt="aws reference stack">
+					</div>
+				</section> <!-- reference model -->
+
+				<section>
+					<h3>AWS Global Infrastructure</h3>
+					<ul>
+					<li>Regions</li>
+					<li>Availability Zones</li>
+					<li>Edge Locations</li>
+					</ul>
+				</section> <!-- global infrastructure -->
+
+				<section>
+					<h3 class="staticHd">Networking Services</h3>
+					<section>
+						<h5>Direct Connect</h5>
+						<p>AWS provides a direct connection between your IT infrastructure and the AWS data centers.</p>
+						<div id="name" class="subnotes">
+						   With this, you can extend your VLANs and privately facing infrastructure into the AWS/Cloud
+						</div>
+					</section>
+					<section>
+						<h5>VPN</h5>
+						<p>AWS provides you the ability to create your own VLAN on the Amazon Infrastructure and have a VPN connection across the internet.</p>
+					</section>
+					<section>
+						<h5>Virtual Cloud</h5>
+						<p>Create an isolated network off a section of the AWS Cloud where you can launch resources and have complete control over your networking environment</p>
+					</section>
+					<section>
+						<ul class="info">
+							<li>
+								<img src="./img/route53a.jpg">
+							</li>
+							<li>
+								<h5>Route 53</h5>
+								<p>Highly available and scalable Domain Name System that is extremely reliable and cost effective.</p>
+								<div class="subnotes">This is a global DNS Service that gives 100% request-reply guarantee.</p>
+							</li>
+						</ul>
+					</section>
+				</section> <!-- networking -->
+
+				<section>
+					<div class="staticHd-img">
+						<table class="">
+							<tr>
+								<td><img style="border: 0px solid green;" src="./img/ec2-main.png"></td>
+								<td><h3 class="hack-take-up">Elastic Compute Cloud</h3></td>
+							</tr>
+						</table>
+						
+					</div>
+					<section>
+						<div class="point">Total of 23 Instance types available .</div>
+						<div class="subnotes">Range from very small ( micro instances ) to very large computation ( cluster compute ) instances.</div>
+					</section>
+					<section>Run windows or linux instances</section>
+					<section>Save your configurations as custom image types <span class="highsectionght">(AMI)</span> from which other machines can be launched.</section>
+					<section>You have full control of your instance</section>
+					<section>You can publish metrics to cloudwatch and have detailed stats on instance health</section>
+				</section> <!-- Ec2 -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Auto Scaling</h3>
+					</div>
+					<img src="./img/auto-scaling.png">
+					<section>
+						<div class="point">Allows automatic re-sizing of compute clusters based on demand</div>
+					</section>
+					<section>Allows you to define minimum and maximum instance pool size for when scaling up or down is needed</section>
+					<section>Uses metrics gathered by Cloudwatch to drive the scaling</section>
+				</section> <!-- auto scaling -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Load Balancing</h3>
+					</div>
+					<img src="./img/elb.png">
+					<section>
+						<div class="point">Distribute load across instances in multiple availability zones</div>
+						<div class="subnotes">The Elastic Load balancer allows you to create highly scalable applications on the Amazon Cloud.</div>
+					</section>
+					<section>It automatically checks the health of instances and takes them in or out of service</section>
+					<section>
+						<div id="name" class="point">
+						   Session Stickiness
+						</div>
+						<div id="name" class="subnotes">
+							The load balancer routes requests to the same instance when a session is started on that instance.
+						</div>
+					</section>
+				</section> <!-- elb -->
+				
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Simple Storage Service (S3)</h3>
+					</div>
+					<img src="./img/s3.png">
+					<section>
+						<div class="point">An object storage platform that acts as a fundamental bedrock of many applications</div>
+						<div class="subnotes">Unlimited storage of any type of data upto 5TB in size</div>
+					</section>
+				</section> <!-- S3 storage -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Elastic Block Storage (EBS)</h3>
+					</div>
+					<img src="./img/ebs-main.png">
+					<section>
+						<div class="point">This is a high performance block storage device that can be mounted as drives on instances</div>
+						<div class="subnotes">With flexible sizes, you have more than enough space for your application environment</div>
+					</section>
+					<section>
+						<div class="point">The EBS volume is private to your instance</div>
+						<div id="name" class="subnotes">
+							The operating system of an instance resides on the EBS volume and any launched instance will boot from this drive
+						</div>
+					</section>
+					<section>
+						<div class="point">Integrates with snapshotting features</div>
+						<div id="name" class="subnotes">
+							Snapshots of the EBS volumes can be taken for point in time restore or even used to launch another instance.
+						</div>
+					</section>
+				</section> <!-- EBS -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Relational Database Service (RDS)</h3>
+					</div>
+					<img src="./img/rds-main.png">
+					<section>
+						<div class="point">Provides Database-as-a-service</div>
+						<div class="subnotes">Managing a production database can be a real pain, RDS alleviates this for you.</div>
+					</section>
+					<section>
+						<div class="point">Easily launch scalable and fault tolerant Mysql, Oracle or SQL Server databases</div>
+						<div id="name" class="subnotes">
+							Like the EC2, the RDS allows you to launch instances based on classes (ie. micro, small, medium, large etc)
+						</div>
+					</section>
+				</section> <!-- rds -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">CloudFront</h3>
+					</div>
+					<img src="./img/cloudfront-main.png">
+					<section>
+						<div class="point">This serves as a Content Delivery Network for static assets on the AWS stack.</div>
+						<div class="subnotes">Easily distibute content to your users with low latency and high data transfer speeds.</div>
+					</section>
+				</section> <!-- EBS -->
+
+				<section>
+					<div class="staticHd">
+						<h3 class="hack-take-up">Elastic Beanstalk</h3>
+					</div>
+					<img src="./img/bean-main.png">
+					<section>
+						<div class="point">Rapidly deploy your applications to the Amazon Cloud.</div>
+						<div class="subnotes">The Elastic Beanstalk allows automatic creation of application environment and proceeds with application deployment.</div>
+					</section>
+				</section> <!-- EBS -->
+
+				<section>
+				<div class="small subnotes"> 
+					[ Intentionally left blank ]
+				</div>
+				</section>
+				<section>
+					<h2>Nginx</h2>
+					<p>
+						Nginx is a fast and very flexible HTTP and Reverse Proxy Server built by Igor Sysoev in 2002.
+					</p>
+					<div id="J" class="subnotes">
+					   The project started with a strong focus on high concurrency, high performance and a low memory footprint
+					</div>
+				</section>
+
+				<section>
+					<h2>Basic Features</h2>
+					<p>
+						Nginx does a lot of the functions of a regular Web server and is excellent as a reverse proxy sitiing on your network.
+					</p>
+					<p>
+						<ul>
+						<li>Serving static content</li>
+						<li>Reverse proxying and caching</li>
+						<li>Simple load balancing and fault tolerance</li>
+						<li>Reconfiguration and upgrade of the nginx executable without a server restart</li>
+						<li>Customizable access log formats</li>
+						<li>Easily execute functions based on client addresses</li>
+						<li>Media Streaming</li>
+						<li>... and many more</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h1>Thank you!</h1>
+				</section>
+
+				<section>
+				<h2>Glossary</h2>
+				<div class="point">Instance types</div>
+				<div class="pricing">
+					<div>
+						<ul>
+							<li>t1.micro - N3.177/hr ($0.020)</li>
+							<li>m1.small - N9.50 ($0.060)</li>
+							<li>m1.medium - N19.06 ($0.120)</li>
+							<li>m1.large - N38.12 ($0.240)</li>
+							<li>cc2.8xlarge - N381.2 ($2.40)</li>
+						</ul>
+					</div>
+				</div>
+				<div id="name" class="small">
+				   see http://aws.amazon.com/ec2/pricing/
+				</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
