@@ -1,0 +1,15 @@
+/*
+ * custom styles for the slides.
+ * Not to mess up the theme files.
+ */
+.reveal section div {
+	margin: 30px 0px;
+}
+
+img.logo-main {
+	padding: 40px;
+	border: 1px solid #ccc;
+	height: 200px;
+	width: 430px;
+	border: 0;
+}
