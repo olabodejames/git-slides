@@ -220,7 +220,7 @@
 					<div>
 						It creates a specialized filesystem to store your code history and when you tell it to, it records snapshots of your code repository.
 					</div>
-				</section> <!-- global infrastructure -->
+				</section> <!-- history -->
 				<section>
 					<div>Do note that git is a command line tool that has GUI frontends, though very convenient, does not show the full power of git. So once we understand the concepts, we'll move to a gui tool</div>
 				</section>
@@ -235,18 +235,18 @@
 						<pre><code>core.editor => your_editor_name_here</code></pre>
 						<pre><code>color.ui => true</code></pre>
 					</section>
-				</section> <!-- elb -->
+				</section> <!-- config -->
 
 				<section>
 					<h3>Initializing a Git repository</h3>
 					<div>Navigate into the folder you'd like git to start tracking and run</div>
 					<pre><code>$ git init</code></pre>
-				</section> <!-- global infrastructure -->
+				</section> <!-- Initializing a repo -->
 
 				<section data-background="#ffffff">
 					<h3 class="hack-take-up">Concepts to remember</h3>
 					<img style="border:0;" src="./img/three-stages.png">
-				</section> <!-- elb -->
+				</section> <!--  -->
 				<section data-background="">
 					<div class="statichd">
 						<h3 style="position: absolute; top: -300px;left: 110px;">A Few of my favourite things</h3>
@@ -263,137 +263,24 @@
 							<li>Git stash</li>
 						</ul>
 					</section>
-				</section> <!-- elb -->
-				
-				<section>
+				</section> <!-- simple commands -->
+				<section data-background="">
 					<div class="statichd">
-						<h3 class="hack-take-up">simple storage service (s3)</h3>
+						<h3 style="position: absolute; top: -300px;left: 110px;">Some more advanced commands</h3>
 					</div>
-					<img src="./img/s3.png">
 					<section>
-						<div class="point">an object storage platform that acts as a fundamental bedrock of many applications</div>
-						<div class="subnotes">unlimited storage of any type of data upto 5tb in size</div>
-					</section>
-				</section> <!-- s3 storage -->
-
-				<section>
-					<div class="statichd">
-						<h3 class="hack-take-up">elastic block storage (ebs)</h3>
-					</div>
-					<img src="./img/ebs-main.png">
-					<section>
-						<div class="point">this is a high performance block storage device that can be mounted as drives on instances</div>
-						<div class="subnotes">with flexible sizes, you have more than enough space for your application environment</div>
-					</section>
-					<section>
-						<div class="point">the ebs volume is private to your instance</div>
-						<div id="name" class="subnotes">
-							the operating system of an instance resides on the ebs volume and any launched instance will boot from this drive
-						</div>
-					</section>
-					<section>
-						<div class="point">integrates with snapshotting features</div>
-						<div id="name" class="subnotes">
-							snapshots of the ebs volumes can be taken for point in time restore or even used to launch another instance.
-						</div>
-					</section>
-				</section> <!-- ebs -->
-
-				<section>
-					<div class="statichd">
-						<h3 class="hack-take-up">relational database service (rds)</h3>
-					</div>
-					<img src="./img/rds-main.png">
-					<section>
-						<div class="point">provides database-as-a-service</div>
-						<div class="subnotes">managing a production database can be a real pain, rds alleviates this for you.</div>
-					</section>
-					<section>
-						<div class="point">easily launch scalable and fault tolerant mysql, oracle or sql server databases</div>
-						<div id="name" class="subnotes">
-							like the ec2, the rds allows you to launch instances based on classes (ie. micro, small, medium, large etc)
-						</div>
-					</section>
-				</section> <!-- rds -->
-
-				<section>
-					<div class="statichd">
-						<h3 class="hack-take-up">cloudfront</h3>
-					</div>
-					<img src="./img/cloudfront-main.png">
-					<section>
-						<div class="point">this serves as a content delivery network for static assets on the aws stack.</div>
-						<div class="subnotes">easily distibute content to your users with low latency and high data transfer speeds.</div>
-					</section>
-				</section> <!-- ebs -->
-
-				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Elastic Beanstalk</h3>
-					</div>
-					<img src="./img/bean-main.png">
-					<section>
-						<div class="point">Rapidly deploy your applications to the Amazon Cloud.</div>
-						<div class="subnotes">The Elastic Beanstalk allows automatic creation of application environment and proceeds with application deployment.</div>
-					</section>
-				</section> <!-- EBS -->
-
-				<section>
-				<div class="small subnotes"> 
-					[ Intentionally left blank ]
-				</div>
-				</section>
-				<section>
-					<h2>Nginx</h2>
-					<p>
-						Nginx is a fast and very flexible HTTP and Reverse Proxy Server built by Igor Sysoev in 2002.
-					</p>
-					<div id="J" class="subnotes">
-					   The project started with a strong focus on high concurrency, high performance and a low memory footprint
-					</div>
-				</section>
-
-				<section>
-					<h2>Basic Features</h2>
-					<p>
-						Nginx does a lot of the functions of a regular Web server and is excellent as a reverse proxy sitiing on your network.
-					</p>
-					<p>
 						<ul>
-						<li>Serving static content</li>
-						<li>Reverse proxying and caching</li>
-						<li>Simple load balancing and fault tolerance</li>
-						<li>Reconfiguration and upgrade of the nginx executable without a server restart</li>
-						<li>Customizable access log formats</li>
-						<li>Easily execute functions based on client addresses</li>
-						<li>Media Streaming</li>
-						<li>... and many more</li>
+							<li>Git reset</li>
+							<li>Git rebase</li>
+							<li>Git cherry-pick</li>
 						</ul>
-					</p>
-				</section>
-
+					</section>
+				</section> <!-- advanced commands -->
+				
 				<section>
 					<h1>Thank you!</h1>
 				</section>
 
-				<section>
-				<h2>Glossary</h2>
-				<div class="point">Instance types</div>
-				<div class="pricing">
-					<div>
-						<ul>
-							<li>t1.micro - N3.177/hr ($0.020)</li>
-							<li>m1.small - N9.50 ($0.060)</li>
-							<li>m1.medium - N19.06 ($0.120)</li>
-							<li>m1.large - N38.12 ($0.240)</li>
-							<li>cc2.8xlarge - N381.2 ($2.40)</li>
-						</ul>
-					</div>
-				</div>
-				<div id="name" class="small">
-				   see http://aws.amazon.com/ec2/pricing/
-				</div>
-				</section>
 
 			</div>
 
