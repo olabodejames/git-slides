@@ -210,158 +210,94 @@
 					</section>
 				</section> <!-- global infrastructure -->
 				<section>
-					<h3>aws global infrastructure</h3>
-					<ul>
-					<li>regions</li>
-					<li>availability zones</li>
-					<li>edge locations</li>
-					</ul>
+					<h3>Now that we have git installed, lets have some fun!</h3>
+				</section> <!-- global infrastructure -->
+				<section>
+					<h3>History</h3>
+					<div>
+						Git is really all about your history.
+					</div>
+					<div>
+						It creates a specialized filesystem to store your code history and when you tell it to, it records snapshots of your code repository.
+					</div>
+				</section> <!-- global infrastructure -->
+				<section>
+					<div>Do note that git is a command line tool that has GUI frontends, though very convenient, does not show the full power of git. So once we understand the concepts, we'll move to a gui tool</div>
+				</section>
+				<section>
+					<h3>Initializing a Git repository</h3>
+					<div>Navigate into the folder you'd like git to start tracking and run</div>
+					<pre><code>$ git init</code></pre>
 				</section> <!-- global infrastructure -->
 
-				<section>
-					<h3 class="staticHd">Networking Services</h3>
-					<section>
-						<h5>Direct Connect</h5>
-						<p>AWS provides a direct connection between your IT infrastructure and the AWS data centers.</p>
-						<div id="name" class="subnotes">
-						   With this, you can extend your VLANs and privately facing infrastructure into the AWS/Cloud
-						</div>
-					</section>
-					<section>
-						<h5>VPN</h5>
-						<p>AWS provides you the ability to create your own VLAN on the Amazon Infrastructure and have a VPN connection across the internet.</p>
-					</section>
-					<section>
-						<h5>Virtual Cloud</h5>
-						<p>Create an isolated network off a section of the AWS Cloud where you can launch resources and have complete control over your networking environment</p>
-					</section>
-					<section>
-						<ul class="info">
-							<li>
-								<img src="./img/route53a.jpg">
-							</li>
-							<li>
-								<h5>Route 53</h5>
-								<p>Highly available and scalable Domain Name System that is extremely reliable and cost effective.</p>
-								<div class="subnotes">This is a global DNS Service that gives 100% request-reply guarantee.</p>
-							</li>
-						</ul>
-					</section>
-				</section> <!-- networking -->
-
-				<section>
-					<div class="staticHd-img">
-						<table class="">
-							<tr>
-								<td><img style="border: 0px solid green;" src="./img/ec2-main.png"></td>
-								<td><h3 class="hack-take-up">Elastic Compute Cloud</h3></td>
-							</tr>
-						</table>
-						
+				<section data-background="#ffffff">
+					<div class="statichd">
+						<h3 class="hack-take-up">Concepts to remember</h3>
 					</div>
-					<section>
-						<div class="point">Total of 23 Instance types available .</div>
-						<div class="subnotes">Range from very small ( micro instances ) to very large computation ( cluster compute ) instances.</div>
-					</section>
-					<section>Run windows or linux instances</section>
-					<section>Save your configurations as custom image types <span class="highsectionght">(AMI)</span> from which other machines can be launched.</section>
-					<section>You have full control of your instance</section>
-					<section>You can publish metrics to cloudwatch and have detailed stats on instance health</section>
-				</section> <!-- Ec2 -->
-
-				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Auto Scaling</h3>
-					</div>
-					<img src="./img/auto-scaling.png">
-					<section>
-						<div class="point">Allows automatic re-sizing of compute clusters based on demand</div>
-					</section>
-					<section>Allows you to define minimum and maximum instance pool size for when scaling up or down is needed</section>
-					<section>Uses metrics gathered by Cloudwatch to drive the scaling</section>
-				</section> <!-- auto scaling -->
-
-				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Load Balancing</h3>
-					</div>
-					<img src="./img/elb.png">
-					<section>
-						<div class="point">Distribute load across instances in multiple availability zones</div>
-						<div class="subnotes">The Elastic Load balancer allows you to create highly scalable applications on the Amazon Cloud.</div>
-					</section>
-					<section>It automatically checks the health of instances and takes them in or out of service</section>
-					<section>
-						<div id="name" class="point">
-						   Session Stickiness
-						</div>
-						<div id="name" class="subnotes">
-							The load balancer routes requests to the same instance when a session is started on that instance.
-						</div>
-					</section>
+					<img style="border:0;" src="./img/three-stages.png">
 				</section> <!-- elb -->
 				
 				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Simple Storage Service (S3)</h3>
+					<div class="statichd">
+						<h3 class="hack-take-up">simple storage service (s3)</h3>
 					</div>
 					<img src="./img/s3.png">
 					<section>
-						<div class="point">An object storage platform that acts as a fundamental bedrock of many applications</div>
-						<div class="subnotes">Unlimited storage of any type of data upto 5TB in size</div>
+						<div class="point">an object storage platform that acts as a fundamental bedrock of many applications</div>
+						<div class="subnotes">unlimited storage of any type of data upto 5tb in size</div>
 					</section>
-				</section> <!-- S3 storage -->
+				</section> <!-- s3 storage -->
 
 				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Elastic Block Storage (EBS)</h3>
+					<div class="statichd">
+						<h3 class="hack-take-up">elastic block storage (ebs)</h3>
 					</div>
 					<img src="./img/ebs-main.png">
 					<section>
-						<div class="point">This is a high performance block storage device that can be mounted as drives on instances</div>
-						<div class="subnotes">With flexible sizes, you have more than enough space for your application environment</div>
+						<div class="point">this is a high performance block storage device that can be mounted as drives on instances</div>
+						<div class="subnotes">with flexible sizes, you have more than enough space for your application environment</div>
 					</section>
 					<section>
-						<div class="point">The EBS volume is private to your instance</div>
+						<div class="point">the ebs volume is private to your instance</div>
 						<div id="name" class="subnotes">
-							The operating system of an instance resides on the EBS volume and any launched instance will boot from this drive
+							the operating system of an instance resides on the ebs volume and any launched instance will boot from this drive
 						</div>
 					</section>
 					<section>
-						<div class="point">Integrates with snapshotting features</div>
+						<div class="point">integrates with snapshotting features</div>
 						<div id="name" class="subnotes">
-							Snapshots of the EBS volumes can be taken for point in time restore or even used to launch another instance.
+							snapshots of the ebs volumes can be taken for point in time restore or even used to launch another instance.
 						</div>
 					</section>
-				</section> <!-- EBS -->
+				</section> <!-- ebs -->
 
 				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">Relational Database Service (RDS)</h3>
+					<div class="statichd">
+						<h3 class="hack-take-up">relational database service (rds)</h3>
 					</div>
 					<img src="./img/rds-main.png">
 					<section>
-						<div class="point">Provides Database-as-a-service</div>
-						<div class="subnotes">Managing a production database can be a real pain, RDS alleviates this for you.</div>
+						<div class="point">provides database-as-a-service</div>
+						<div class="subnotes">managing a production database can be a real pain, rds alleviates this for you.</div>
 					</section>
 					<section>
-						<div class="point">Easily launch scalable and fault tolerant Mysql, Oracle or SQL Server databases</div>
+						<div class="point">easily launch scalable and fault tolerant mysql, oracle or sql server databases</div>
 						<div id="name" class="subnotes">
-							Like the EC2, the RDS allows you to launch instances based on classes (ie. micro, small, medium, large etc)
+							like the ec2, the rds allows you to launch instances based on classes (ie. micro, small, medium, large etc)
 						</div>
 					</section>
 				</section> <!-- rds -->
 
 				<section>
-					<div class="staticHd">
-						<h3 class="hack-take-up">CloudFront</h3>
+					<div class="statichd">
+						<h3 class="hack-take-up">cloudfront</h3>
 					</div>
 					<img src="./img/cloudfront-main.png">
 					<section>
-						<div class="point">This serves as a Content Delivery Network for static assets on the AWS stack.</div>
-						<div class="subnotes">Easily distibute content to your users with low latency and high data transfer speeds.</div>
+						<div class="point">this serves as a content delivery network for static assets on the aws stack.</div>
+						<div class="subnotes">easily distibute content to your users with low latency and high data transfer speeds.</div>
 					</section>
-				</section> <!-- EBS -->
+				</section> <!-- ebs -->
 
 				<section>
 					<div class="staticHd">
