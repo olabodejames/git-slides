@@ -13,3 +13,4 @@ img.logo-main {
 	width: 430px;
 	border: 0;
 }
+.pos-static {position: absolute; top: -280px; left: 280px;}
